@@ -1,4 +1,4 @@
-#include <SFML\Graphics.hpp>
+#include <SFML/Graphics.hpp>
 #include <vector>
 #include "Doodle.h"
 #include "Platform.h"
@@ -14,6 +14,11 @@ World::World(sf::Texture & d, sf::Texture & pl) : doodle(d)
 }
 
 void World::GeneratePlatform()
+{
+	return;
+}
+
+void World::Update()
 {
 	return;
 }
