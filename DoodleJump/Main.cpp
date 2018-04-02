@@ -1,17 +1,20 @@
 #include <SFML/Graphics.hpp>
 #include "Entity.h"
+#include "Platform.h"
+#include "Doodle.h"
+#include "World.h"
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode(800, 800), "SFML works!");
-	sf::CircleShape shape(100.f);
-	shape.setFillColor(sf::Color::Green);
 
-	sf::Texture texture;
-	texture.loadFromFile("images/doodle.png");
-	
-	sf::Sprite sprite(texture);
-	Entity h(texture);
-	sprite.setPosition(sf::Vector2f(100.f, 100.f));
+	sf::Texture doodle_texture;
+	sf::Texture platform_texture;
+
+	doodle_texture.loadFromFile("images/doodle.png");
+	platform_texture.loadFromFile("images/platform.png");
+
+	World world(doodle_texture, platform_texture);
+
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -20,12 +23,13 @@ int main()
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
-		//sprite.move(0.01, 0.011);
-		h.SetPosition(10, 100);
+		
+
 		window.clear();
-		//window.draw(shape);
-		//window.draw(sprite);
-		h.draw(window);
+		//draw
+		world.drawAll(window);
+
+
 		window.display();
 	}
 

@@ -8,6 +8,7 @@ Entity::Entity(sf::Texture & tex)
 	texture = tex;
 	sprite = sf::Sprite(texture);
 	life = 1;
+	Pos = sf::Vector2f(10, 100);
 }
 
 void Entity::SetPosition(float x, float y)
