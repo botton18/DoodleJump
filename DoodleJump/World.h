@@ -13,7 +13,7 @@ private:
 	vector<Platform*> p;
 
 public:
-	World(sf::Texture & d, sf::Texture & p) : doodle(d) {}
+	World(sf::Texture & d, sf::Texture & p);
 
 	void GeneratePlatform();
 

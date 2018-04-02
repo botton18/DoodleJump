@@ -4,8 +4,9 @@
 #include "Platform.h"
 #include "World.h"
 
-World::World(sf::Texture & d, sf::Texture & pl)
+World::World(sf::Texture & d, sf::Texture & pl) : doodle(d)
 {
+
 	for (int i = 0; i < 6; ++i)
 	{
 		Platform *temp = new Platform(pl, i + 1, i + 1);
