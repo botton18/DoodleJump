@@ -22,6 +22,12 @@ public:
 
 	void draw(sf::RenderWindow & win);
 
+	void Walk(float x, float y);
+
+	sf::Vector2f getPos();
+
+	sf::Sprite getSprite();
+
 	virtual void Shoot()
 	{
 		return;

@@ -29,3 +29,8 @@ void Platform::draw(sf::RenderWindow & win)
 	sprite.setPosition(Pos);
 	win.draw(sprite);
 }
+
+sf::Sprite Platform::getSprite()
+{
+	return sprite;
+}

@@ -17,6 +17,8 @@ public:
 	void SetPosition(sf::Vector2f p);
 
 	void draw(sf::RenderWindow & win);
+
+	sf::Sprite getSprite();
 };
 
 #endif

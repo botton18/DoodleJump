@@ -21,6 +21,22 @@ void Entity::SetPosition(sf::Vector2f p)
 	Pos = p;
 }
 
+sf::Sprite Entity::getSprite()
+{
+	return sprite;
+}
+
+void Entity::Walk(float x, float y)
+{
+	Pos.x += x;
+	Pos.y += y;
+}
+
+sf::Vector2f Entity::getPos()
+{
+	return Pos;
+}
+
 void Entity::draw(sf::RenderWindow & win)
 {
 	sprite.setPosition(Pos);

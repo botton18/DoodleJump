@@ -11,9 +11,11 @@ class World
 private:
 	Doodle doodle;
 	vector<Platform*> p;
-
+	sf::Texture tex;
+	sf::Sprite Background;
+	bool isfalling;
 public:
-	World(sf::Texture & d, sf::Texture & p);
+	World(sf::Texture & d, sf::Texture & p, sf::Texture & bg);
 
 	void GeneratePlatform();
 
